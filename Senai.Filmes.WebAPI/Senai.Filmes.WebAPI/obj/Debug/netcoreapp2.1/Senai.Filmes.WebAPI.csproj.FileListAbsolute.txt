@@ -1,0 +1,14 @@
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\bin\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.deps.json
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\bin\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.runtimeconfig.json
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\bin\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.runtimeconfig.dev.json
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\bin\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.dll
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\bin\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.pdb
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.csprojAssemblyReference.cache
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.RazorAssemblyInfo.cache
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.RazorAssemblyInfo.cs
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.AssemblyInfoInputs.cache
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.AssemblyInfo.cs
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.dll
+C:\Users\41813664803\Desktop\Arquivos\2s2019-t2-sprint-2-backend\Senai.Filmes.WebAPI\Senai.Filmes.WebAPI\obj\Debug\netcoreapp2.1\Senai.Filmes.WebAPI.pdb

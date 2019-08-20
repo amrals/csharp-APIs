@@ -9,15 +9,53 @@ namespace Senai.Sstop.WebApi.Repository
 {
     public class EstiloRepository
     {
-        //List<EstiloDomain> estilos = new List<EstiloDomain>
-        //{
-        //    new EstiloDomain { IdEstilo = 1,Nome = "Rock"}
-        //    , new EstiloDomain { IdEstilo = 2,Nome = "Pop"}
-        //};
-
         private string StringConexao =
             "Data Source=.\\SqlExpress; Initial catalog=M_SStop; User Id=sa;Pwd=132";
 
+        // POST
+        public void Cadastrar(EstiloDomain estilo)
+        {
+            string Query = "INSERT INTO EstilosMusicais (Nome) VALUES (@Nome)";
+            using(SqlConnection con = new SqlConnection(StringConexao))
+            {
+                SqlCommand cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@Nome", estilo.Nome);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // GET
+        public EstiloDomain BuscarPorId(int id)
+        {
+            string Query ="SELECT IdEstiloMusical, Nome FROM EstilosMusicais WHERE IdEstiloMusical = @IdEstiloMusical";
+            using(SqlConnection con = new SqlConnection(StringConexao))
+            {
+                con.Open();
+                SqlDataReader sdr;
+
+                using(SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdEstiloMusical", id);
+                    sdr = cmd.ExecuteReader();
+                    if(sdr.HasRows)
+                    {
+                        while(sdr.Read())
+                        {
+                            EstiloDomain estilo = new EstiloDomain
+                            {
+                                IdEstilo = Convert.ToInt32(sdr["IdEstiloMusical"]),
+                                Nome = sdr["Nome"].ToString()
+                            };
+                            return estilo;
+                        }
+                    }
+                    return null;
+                }
+            }
+        }
+
+        // GET
         public List<EstiloDomain> Listar()
         {
             List<EstiloDomain> estilos = new List<EstiloDomain>();
@@ -51,6 +89,33 @@ namespace Senai.Sstop.WebApi.Repository
                 }
             }
             return estilos;
+        }
+
+        // PUT
+        public void Alterar(EstiloDomain estiloDomain)
+        {
+            string Query = "UPDATE EstilosMusicais SET Nome = @Nome WHERE IdEstiloMusical = @IdEstiloMusical";
+            using(SqlConnection con = new SqlConnection(StringConexao))
+            {
+                SqlCommand cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@Nome", estiloDomain.Nome);
+                cmd.Parameters.AddWithValue("@IdEstiloMusical", estiloDomain.IdEstilo);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // DELETE
+        public void Deletar(int id)
+        {
+            string Query = "DELETE  FROM EstilosMusicais WHERE IdEstiloMusical = @IdEstiloMusical";
+            using(SqlConnection con = new SqlConnection(StringConexao))
+            {
+                SqlCommand cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@IdEstiloMusical", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }
