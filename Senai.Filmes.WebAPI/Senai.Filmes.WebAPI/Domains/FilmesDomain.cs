@@ -9,6 +9,6 @@ namespace Senai.Filmes.WebAPI.Domains
     {
         public int IdFilme { get; set; }
         public string Titulo { get; set; }
-        public int GeneroId { get; set; }
+        public int IdGenero { get; set; }
     }
 }
