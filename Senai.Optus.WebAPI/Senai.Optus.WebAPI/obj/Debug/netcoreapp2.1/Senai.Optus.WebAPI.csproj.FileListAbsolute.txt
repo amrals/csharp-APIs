@@ -1,0 +1,14 @@
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\bin\Debug\netcoreapp2.1\Senai.Optus.WebAPI.deps.json
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\bin\Debug\netcoreapp2.1\Senai.Optus.WebAPI.runtimeconfig.json
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\bin\Debug\netcoreapp2.1\Senai.Optus.WebAPI.runtimeconfig.dev.json
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\bin\Debug\netcoreapp2.1\Senai.Optus.WebAPI.dll
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.csprojAssemblyReference.cache
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.RazorAssemblyInfo.cache
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.RazorAssemblyInfo.cs
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.AssemblyInfoInputs.cache
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.AssemblyInfo.cs
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\bin\Debug\netcoreapp2.1\Senai.Optus.WebAPI.pdb
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.dll
+C:\Users\41813664803\source\repos\Senai.Optus.WebAPI\Senai.Optus.WebAPI\obj\Debug\netcoreapp2.1\Senai.Optus.WebAPI.pdb
