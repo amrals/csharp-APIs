@@ -1,0 +1,36 @@
+CREATE DATABASE M_Ekips;
+USE M_Ekips;
+CREATE TABLE Permissoes
+(
+	IdPermissao INT PRIMARY KEY IDENTITY,
+	Descricao VARCHAR(50) NOT NULL
+);
+CREATE TABLE Departamentos
+(
+	IdDepartamento INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(100) NOT NULL
+);
+CREATE TABLE Cargos
+(
+	IdCargo INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(100) NOT NULL,
+	Atividade VARCHAR(100) NOT NULL
+);
+CREATE TABLE Usuarios
+(
+	IdUsuario INT PRIMARY KEY IDENTITY,
+	Email VARCHAR(255) NOT NULL,
+	Senha VARCHAR(255) NOT NULL,
+	IdPermissao INT FOREIGN KEY REFERENCES Permissoes(IdPermissao)
+);
+CREATE TABLE Funcionarios
+(
+	IdFuncionario INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(255) NOT NULL,
+	Cpf VARCHAR(25) NOT NULL,
+	DataNascimento DATE NOT NULL,
+	Salario SMALLMONEY NOT NULL,
+	IdDepartamento INT FOREIGN KEY REFERENCES Departamentos(IdDepartamento),
+	IdCargo INT FOREIGN KEY REFERENCES Cargos(IdCargo),
+	IdUsuario INT FOREIGN KEY REFERENCES Usuarios(IdUsuario) UNIQUE
+);
