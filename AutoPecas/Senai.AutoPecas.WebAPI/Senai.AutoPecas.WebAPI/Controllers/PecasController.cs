@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.AutoPecas.WebAPI.Domains;
@@ -28,15 +30,23 @@ namespace Senai.AutoPecas.WebAPI.Controllers
             return Ok(PecasRepository.Listar());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
             Pecas peca = PecasRepository.BuscarPorId(id);
             if (peca == null)
             {
-                return null;
+                return NotFound();
             }
-            return Ok(peca);
+            int idBuscadoUsuario = Convert.ToInt32(HttpContext.User.Claims.First(x => x.Type == "FornecedorId").Value);
+            if (idBuscadoUsuario == peca.FornecedorId)
+            {
+                return Ok(peca);
+            }
+            return NotFound();
+            
+            
         }
 
         [HttpPost]
