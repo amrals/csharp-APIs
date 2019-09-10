@@ -37,6 +37,14 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
+        [HttpPost("cadastrocomum")]
+        public IActionResult CadastrarComum(Usuarios usuario)
+        {
+            usuario.IdTipoUsuario = 2;  
+            UsuariosRepository.Cadastrar(usuario);
+            return Ok();
+        }
+
         [HttpPut]
         public IActionResult Atualizar(Usuarios usuario)
         {
