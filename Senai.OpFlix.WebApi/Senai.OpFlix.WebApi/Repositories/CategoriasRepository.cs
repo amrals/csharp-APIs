@@ -1,4 +1,5 @@
-﻿using Senai.OpFlix.WebApi.Domains;
+﻿using Microsoft.AspNetCore.Authorization;
+using Senai.OpFlix.WebApi.Domains;
 using Senai.OpFlix.WebApi.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
+        
         public void Cadastrar(Categorias categoria)
         {
             using(OpFlixContext ctx = new OpFlixContext())

@@ -1,5 +1,6 @@
 ﻿using Senai.OpFlix.WebApi.Domains;
 using Senai.OpFlix.WebApi.Interfaces;
+using Senai.OpFlix.WebApi.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,5 +60,16 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
+        public Usuarios BuscarPorEmailESenha(LoginViewModel login)
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                // buscar os dados no banco e verificar ser os dados são compatíveis
+                Usuarios UsuarioBuscado = ctx.Usuarios.FirstOrDefault(x => x.Email == login.Email && x.Senha == login.Senha);
+                if (UsuarioBuscado == null)
+                    return null;
+                return UsuarioBuscado;
+            }
+        }
     }
 }

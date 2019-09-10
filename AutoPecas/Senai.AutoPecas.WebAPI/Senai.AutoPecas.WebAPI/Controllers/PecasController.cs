@@ -45,8 +45,6 @@ namespace Senai.AutoPecas.WebAPI.Controllers
                 return Ok(peca);
             }
             return NotFound();
-            
-            
         }
 
         [HttpPost]

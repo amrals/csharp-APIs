@@ -1,4 +1,5 @@
 ﻿using Senai.OpFlix.WebApi.Domains;
+using Senai.OpFlix.WebApi.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Senai.OpFlix.WebApi.Interfaces
         void Cadastrar(Usuarios usuario);
         void Atualizar(Usuarios usuario);
         void Deletar(int id);
+        Usuarios BuscarPorEmailESenha(LoginViewModel login);
     }
 }
