@@ -12,5 +12,6 @@ namespace Senai.OpFlix.WebApi.Domains
         public int? IdTipoUsuario { get; set; }
 
         public TiposUsuarios IdTipoUsuarioNavigation { get; set; }
+        public List<Favoritos> Favoritos { get; set; }
     }
 }

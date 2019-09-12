@@ -8,8 +8,8 @@ namespace Senai.OpFlix.WebApi.Interfaces
 {
     public interface IFavoritosRepository
     {
-        List<Favoritos> Listar();
+        List<Favoritos> Listar(int idUsuario);
         void Cadastrar(Favoritos favorito);
-        void Deletar(int idUsuario, int idMidia);
+        void Deletar(int IdUsuario, Favoritos favorito);
     }
 }
