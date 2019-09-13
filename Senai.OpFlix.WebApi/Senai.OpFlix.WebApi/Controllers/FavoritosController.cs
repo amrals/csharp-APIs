@@ -24,6 +24,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             FavoritosRepository = new FavoritosRepository();
         }
 
+        /// <summary>
+        /// Deleta um favorito
+        /// </summary>
+        /// <param name="favorito"></param>
+        /// <returns>verificação</returns>
         [HttpDelete]
         public IActionResult Deletar(Favoritos favorito)
         {
@@ -32,6 +37,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Lista todos os favoritos
+        /// </summary>
+        /// <returns>Lista de favoritos</returns>
         [HttpGet]
         public IActionResult Listar()
         {
@@ -39,6 +48,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok(FavoritosRepository.Listar(idBuscadoUsuario));
         }
 
+        /// <summary>
+        /// Cadastro um favorito
+        /// </summary>
+        /// <param name="favorito"></param>
+        /// <returns>verificação</returns>
         [HttpPost]
         public IActionResult Cadastrar(Favoritos favorito)
         {

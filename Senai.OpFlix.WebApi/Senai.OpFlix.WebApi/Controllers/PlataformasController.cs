@@ -23,7 +23,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             PlataformasRepository = new PlataformasRepository();
         }
 
-        // Lista todas plataformas
+        /// <summary>
+        /// Lista todas plataformas
+        /// </summary>
+        /// <returns>Lista de plataformas</returns>
         [Authorize]
         [HttpGet]
         public IActionResult Listar()
@@ -31,7 +34,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok(PlataformasRepository.Listar());
         }
 
-        // Cadastra plataformas
+        /// <summary>
+        /// Cadastra plataformas
+        /// </summary>
+        /// <param name="plataforma"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Plataformas plataforma)
@@ -40,7 +47,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Atualiza plataformas
+        /// <summary>
+        /// Atualiza plataformas
+        /// </summary>
+        /// <param name="plataforma"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPut]
         public IActionResult Atualizar(Plataformas plataforma)
@@ -49,7 +60,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Deleta alguma plataforma por id
+        /// <summary>
+        /// Deleta alguma plataforma por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
@@ -58,7 +73,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Busca alguma plataforma por id
+        /// <summary>
+        /// Busca alguma plataforma por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>plataforma</returns>
         [Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)

@@ -23,7 +23,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             CategoriasRepository = new CategoriasRepository();
         }
 
-        // Lista todas as categorias
+        /// <summary>
+        /// Lista todas as categorias
+        /// </summary>
+        /// <returns>Lista de categorias</returns>
         [Authorize]
         [HttpGet]
         public IActionResult Listar()
@@ -31,7 +34,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok(CategoriasRepository.Listar());
         }
 
-        // Cadastra categorias
+        /// <summary>
+        /// Cadastra categorias
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Categorias categoria)
@@ -40,7 +47,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Atualiza categorias
+        /// <summary>
+        /// Atualiza categorias
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPut]
         public IActionResult Atualizar(Categorias categoria)
@@ -49,7 +60,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Deleta categorias
+        /// <summary>
+        /// Deleta categorias
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
@@ -58,7 +73,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Busca uma categoria por id
+        /// <summary>
+        /// Busca uma categoria por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>categoria</returns>
         [Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)

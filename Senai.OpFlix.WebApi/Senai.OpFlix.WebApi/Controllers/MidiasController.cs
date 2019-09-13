@@ -23,7 +23,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             MidiasRepository = new MidiasRepository();
         }
 
-        // Lista todas as mídias
+        /// <summary>
+        /// Lista todas as mídias
+        /// </summary>
+        /// <returns>Lista de mídias</returns>
         [Authorize]
         [HttpGet]
         public IActionResult Listar()
@@ -31,7 +34,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok(MidiasRepository.Listar());
         }
 
-        // Cadastra uma mídia
+        /// <summary>
+        /// Cadastra uma mídia
+        /// </summary>
+        /// <param name="midia"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Midias midia)
@@ -40,7 +47,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Atualiza alguma mídia
+        /// <summary>
+        /// Atualiza alguma mídia
+        /// </summary>
+        /// <param name="midia"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPut]
         public IActionResult Atualizar(Midias midia)
@@ -49,7 +60,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Deletar alguma mídia por id
+        /// <summary>
+        /// Deletar alguma mídia por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
@@ -58,7 +73,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Busca alguma mídia por id
+        /// <summary>
+        /// Busca alguma mídia por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>midia</returns>
         [Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)

@@ -24,7 +24,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             UsuariosRepository = new UsuariosRepository();
         }
 
-        // Listagem de usuários pelo usuário administrador.
+        /// <summary>
+        /// Listagem de usuários pelo usuário administrador.
+        /// </summary>
+        /// <returns>Lista de usuários</returns>
         [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Listar()
@@ -32,7 +35,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok(UsuariosRepository.Listar());
         }
 
-        // Cadastro de usuários feito pelo usuário administrador.
+        /// <summary>
+        /// Cadastro de usuários feito pelo usuário administrador.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Usuarios usuario)
@@ -41,7 +48,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Cadastro de usuários padrão e público, com o tipo de usuário travado em "2" (comum).
+        /// <summary>
+        /// Cadastro de usuários padrão e público, com o tipo de usuário travado em "2" (comum).
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>verificação</returns>
         [HttpPost("cadastrocomum")]
         public IActionResult CadastrarComum(Usuarios usuario)
         {
@@ -50,7 +61,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Atualização de usuários pelo usuário administrador
+        /// <summary>
+        /// Atualização de usuários pelo usuário administrador
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpPut]
         public IActionResult Atualizar(Usuarios usuario)
@@ -59,7 +74,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Se o id do usuário que está logado for o mesmo do usuario que ele está tentando atualizar, retorna ok. Caso contrário, se os id's forem diferentes, seu request não é autorizado.
+        /// <summary>
+        /// Se o id do usuário que está logado for o mesmo do usuario que ele está tentando atualizar, retorna ok. Caso contrário, se os id's forem diferentes, seu request não é autorizado.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>verificação</returns>
         [Authorize]
         [HttpPut("atualizarcomum")]
         public IActionResult AtualizarComum(Usuarios usuario)
@@ -79,8 +98,12 @@ namespace Senai.OpFlix.WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        
-        // Deletar usuários.
+
+        /// <summary>
+        /// Deletar usuários.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>verificação</returns>
         [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
@@ -89,7 +112,11 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
-        // Busca pelo id.
+        /// <summary>
+        /// Busca pelo id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>usuario</returns>
         [Authorize(Roles = "1")]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
