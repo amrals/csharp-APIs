@@ -71,5 +71,15 @@ namespace Senai.OpFlix.WebApi.Repositories
                 return UsuarioBuscado;
             }
         }
+
+        public void AtualizarComum(Usuarios usuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CadastrarComum(Usuarios usuario)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

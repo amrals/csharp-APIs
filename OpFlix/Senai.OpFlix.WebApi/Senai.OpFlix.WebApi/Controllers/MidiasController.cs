@@ -89,5 +89,19 @@ namespace Senai.OpFlix.WebApi.Controllers
             }
             return Ok(midia);
         }
+
+        [Authorize]
+        [HttpGet("FiltrarPorCategoria/{categoria}")]
+        public IActionResult FiltrarPorCategoria(int categoria)
+        {
+            return Ok(MidiasRepository.FiltrarPorCategoria(categoria));
+        }
+
+        [Authorize]
+        [HttpGet("FiltrarPorCategoria/")]
+        public IActionResult Nulo()
+        {
+            return Ok(MidiasRepository.Listar());
+        }
     }
 }

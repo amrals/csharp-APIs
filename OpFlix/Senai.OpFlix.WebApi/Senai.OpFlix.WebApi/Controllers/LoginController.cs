@@ -44,12 +44,18 @@ namespace Senai.OpFlix.WebApi.Controllers
 
                 var claims = new[]
                 {
+                    // nome
+                    new Claim("Nome", Usuario.Nome),
+
+                    new Claim("Email", Usuario.Email),
                     // email
                     new Claim(JwtRegisteredClaimNames.Email, Usuario.Email),
                     // id
                     new Claim(JwtRegisteredClaimNames.Jti, Usuario.IdUsuario.ToString()),
                     // é a permissão do usuário
                     new Claim(ClaimTypes.Role, Usuario.IdTipoUsuario.ToString()),
+
+                    new Claim("Permissao", Usuario.IdTipoUsuario.ToString()),
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("opflix-chave-autenticacao"));
@@ -60,7 +66,7 @@ namespace Senai.OpFlix.WebApi.Controllers
                     issuer: "OpFlix.WebApi",
                     audience: "OpFlix.WebApi",
                     claims: claims,
-                    expires: DateTime.Now.AddMinutes(30),
+                    expires: DateTime.Now.AddDays(30),
                     signingCredentials: creds);
 
                 return Ok(new

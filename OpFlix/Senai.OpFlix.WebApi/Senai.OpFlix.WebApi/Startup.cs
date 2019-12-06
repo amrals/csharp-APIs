@@ -56,6 +56,10 @@ namespace Senai.OpFlix.WebApi
                     ValidAudience = "OpFlix.WebApi"
                 };
             });
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +70,7 @@ namespace Senai.OpFlix.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("CorsPolicy");
             app.UseAuthentication();
             app.UseMvc();
             app.UseSwagger();

@@ -1,4 +1,5 @@
-﻿using Senai.OpFlix.WebApi.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using Senai.OpFlix.WebApi.Domains;
 using Senai.OpFlix.WebApi.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -63,5 +64,12 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
+        public List<Midias> FiltrarPorCategoria(int categoria)
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                return ctx.Midias.Include(x => x.IdCategoriaNavigation).Include(x => x.IdPlataformaNavigation).Include(x => x.IdTipoMidiaNavigation).Where(x => x.IdCategoria == categoria).ToList();
+            }
+        }
     }
 }

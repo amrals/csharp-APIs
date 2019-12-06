@@ -41,5 +41,12 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// <param name="id"></param>
         /// <returns>verificação</returns>
         void Deletar(int id);
+
+        /// <summary>
+        /// Filtra alguma mídia por categoria
+        /// </summary>
+        /// <param name="id categoria"></param>
+        /// <returns>midia</returns>
+        List<Midias> FiltrarPorCategoria(int categoria);
     }
 }
